@@ -28,6 +28,8 @@ dialogs = [[
 def main(
     model_name,
     peft_model: str=None,
+    input_file: str=None,
+    input_prompt: str=None,
     output_file: str=None,
     quantization: bool=False,
     max_new_tokens =256, #The maximum numbers of tokens to generate
@@ -50,9 +52,13 @@ def main(
     **kwargs
 ):
     res = []
-    # with open('prompts_vbench_test.txt', 'r') as f:
-    with open('./prompts_webvid_test/prompts_webvid_src.txt', 'r') as f:
-        prompts_src = f.readlines()
+    if input_file:
+        with open(input_file, 'r') as f:
+            prompts_src = f.readlines()
+    elif input_prompt:
+        prompts_src = [input_prompt]
+    else:
+        sys.exit('input is None.')
     prompts_src = [p.strip() for p in prompts_src]
     # Set the seeds for reproducibility
     if is_xpu_available():

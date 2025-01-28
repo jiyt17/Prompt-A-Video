@@ -8,12 +8,31 @@ The code base for [Prompt-A-Video: Prompt Your Video Diffusion Model via Prefere
 
 | Text-to-Video Model | Fine-tuning data | prompt booster |
 | --- | --- | --- |
-|Open-Sora 1.2 | | [HF Link](https://huggingface.co/jiyatai/Prompt_A_Video_OS) |
-|CogVideoX | | [HF Link](https://huggingface.co/jiyatai/Prompt_A_Video_CV) |
+|Open-Sora 1.2 | [json link](https://huggingface.co/datasets/jiyatai/Prompt-A-Video-SFT-data/blob/main/OS_prompt_pairs_gpt4o_webvid.json) | [HF Link](https://huggingface.co/jiyatai/Prompt_A_Video_OS) |
+|CogVideoX | [json link](https://huggingface.co/datasets/jiyatai/Prompt-A-Video-SFT-data/blob/main/CV_prompt_pairs_glm_webvid.json) | [HF Link](https://huggingface.co/jiyatai/Prompt_A_Video_CV) |
 
-Test benchmark
+Test benchmark: 
+
+> In-domain: benchmark/prompts_webvid_test.txt \
+> Out-of-domain: benchmark/prompts_vbench_test.txt
 
 ## Inference
+
+Prompt-A-Video is based on LLama3. The conda environment can be found in LLama3 or [requirements.txt](requirements.txt).
+
+### Prompt refinement
+
+Under booster/inference:
+
+> bash inference.sh
+
+### Text-to-video generation
+
+Build the environment for CogVideoX or Open-Sora1.2.
+
+Under text-to-video/CogVideoX:
+
+> bash inference.sh
 
 ## Fine-tuning
 
