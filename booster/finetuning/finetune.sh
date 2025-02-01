@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0,1 torchrun --master_port 30000 --nnodes 1 --nproc_per_node 2  finetuning.py --enable_fsdp --dataset "custom_dataset" --custom_dataset.file "datasets/custom_dataset.py" --model_name /path/to/llama --use_peft --peft_method lora --output_dir /path/to/lora --num_epochs 12 --batch_size_training 4
