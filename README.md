@@ -88,7 +88,7 @@ We first merge the fine-tuned Lora with the base model with booster/merge.py. Th
 
 To further improve metrics, we can continue to conduct DPO. Merge the lora after DPO training, then build DPO data and train again.
 
-## Acknowledge
+## Acknowledgement
 * [LLama3](https://github.com/meta-llama/llama-cookbook)
 * [CogVideoX](https://github.com/THUDM/CogVideo)
 * [Open-Sora1.2](https://github.com/hpcaitech/Open-Sora)
