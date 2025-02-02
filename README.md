@@ -40,7 +40,7 @@ Under text-to-video/CogVideoX:
 
 We adopt reward-based prompt evolution pipeline, which consists of three parts: LLM (GPT4o/GLM4), text-to-video models (Open-Sora1.2/CogVideoX), reward models (VideoScore, MPS, Aes-predictor).
 
-*We only provide core code of text-to-video and reward models in folders 'text-to-video' and 'rewards', please refer to original projects in Acknowledgement for more details.*
+*We only provide core code of text-to-video and reward models in folders 'text-to-video' and 'rewards', please refer to original projects in Acknowledgments for more details.*
 
 The constructed fine-tuning data can be found [here](https://huggingface.co/datasets/jiyatai/Prompt-A-Video-SFT-data). To run the process, under booster/finetuning:
 
@@ -88,7 +88,7 @@ We first merge the fine-tuned Lora with the base model with booster/merge.py. Th
 
 To further improve metrics, we can continue to conduct DPO. Merge the lora after DPO training, then build DPO data and train again.
 
-## Acknowledgement
+## Acknowledgments
 * [LLama3](https://github.com/meta-llama/llama-cookbook)
 * [CogVideoX](https://github.com/THUDM/CogVideo)
 * [Open-Sora1.2](https://github.com/hpcaitech/Open-Sora)
